@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Recado extends Model
+{
+    protected $fillable = ['titulo', 'texto', 'user_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
